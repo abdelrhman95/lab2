@@ -1,0 +1,20 @@
+1- How remove branchs locally and remotely?
+    - to remove it locally >>>> git -d <branch-name>
+    - to remove it remotely >>>> git push origin --delete <branch-name>
+
+2- How to checkout another branch without commit
+changes?
+    - git switch -f <branch-name>
+
+3- How to list tags? 
+    - git tag
+
+
+4- How to delete tag locally and remotely?
+    - to delete it locally >>>> git tag -d <tag-name>
+     Then verify that the local deletion was successful by running:
+        - git show-ref --tags 
+    and if you don't see your deleted tag in the output, it means it has been successfully removed from your local repository.
+
+    - and to delete the same tag on the remote repo run:
+        git push origin :refs/tags/<tag-name>
